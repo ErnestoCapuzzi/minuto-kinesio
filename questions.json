@@ -1,0 +1,962 @@
+[
+  {
+    "id": "Q001",
+    "tag": "Deporte",
+    "q": "¿Qué objetivo principal tiene el calentamiento antes de entrenar?",
+    "o": ["Fatigar el músculo", "Preparar tejidos y sistema nervioso", "Reemplazar el entrenamiento", "Evitar toda sudoración"],
+    "a": 1,
+    "exp": "El calentamiento aumenta temperatura y activa el sistema neuromuscular para rendir mejor y reducir riesgos."
+  },
+  {
+    "id": "Q002",
+    "tag": "Deporte",
+    "q": "Para mejorar rendimiento, la carga de entrenamiento debe ser…",
+    "o": ["Igual todos los días", "Progresiva y planificada", "Aleatoria sin registro", "Solo aeróbica"],
+    "a": 1,
+    "exp": "La progresión gradual permite adaptación y reduce lesiones por sobreuso."
+  },
+  {
+    "id": "Q003",
+    "tag": "Deporte",
+    "q": "El dolor muscular tardío (DOMS) suele aparecer…",
+    "o": ["Durante el esfuerzo", "24-48 horas después", "Solo en lesiones graves", "Siempre con fiebre"],
+    "a": 1,
+    "exp": "El DOMS es común tras cargas nuevas y aparece 24-48 h luego."
+  },
+  {
+    "id": "Q004",
+    "tag": "Deporte",
+    "q": "¿Qué es más efectivo para la recuperación post entrenamiento?",
+    "o": ["Solo estirar fuerte", "Dormir y nutrirse bien", "Evitar moverse por días", "Tomar analgésicos siempre"],
+    "a": 1,
+    "exp": "El descanso y la nutrición adecuada favorecen la reparación tisular."
+  },
+  {
+    "id": "Q005",
+    "tag": "Deporte",
+    "q": "La fuerza excéntrica es especialmente útil para…",
+    "o": ["Prevenir lesiones de isquiotibiales", "Aumentar solo la flexibilidad", "Evitar toda fatiga", "Sustituir el trabajo técnico"],
+    "a": 0,
+    "exp": "El trabajo excéntrico mejora la tolerancia de los isquiotibiales y reduce recaídas."
+  },
+  {
+    "id": "Q006",
+    "tag": "Deporte",
+    "q": "En deportes con saltos, la prevención de lesiones de rodilla incluye…",
+    "o": ["Evitar el entrenamiento de fuerza", "Mejorar la técnica de aterrizaje", "Reducir el sueño", "Correr siempre en asfalto"],
+    "a": 1,
+    "exp": "Una técnica de aterrizaje adecuada disminuye el estrés en rodilla."
+  },
+  {
+    "id": "Q007",
+    "tag": "Deporte",
+    "q": "¿Cuál es un signo típico de sobreentrenamiento?",
+    "o": ["Mejora continua del rendimiento", "Fatiga persistente y bajo rendimiento", "Apetito aumentado", "Sueño profundo"],
+    "a": 1,
+    "exp": "La fatiga sostenida y el descenso del rendimiento sugieren sobreentrenamiento."
+  },
+  {
+    "id": "Q008",
+    "tag": "Deporte",
+    "q": "Para prevenir esguinces de tobillo es clave entrenar…",
+    "o": ["Propiocepción y equilibrio", "Solo resistencia", "Solo flexibilidad", "Evitar superficies inestables"],
+    "a": 0,
+    "exp": "El entrenamiento propioceptivo mejora la estabilidad del tobillo."
+  },
+  {
+    "id": "Q009",
+    "tag": "Deporte",
+    "q": "¿Qué aporta el trabajo de core en deportistas?",
+    "o": ["Solo estética", "Mejor control y transmisión de fuerza", "Menos coordinación", "Reduce la movilidad"],
+    "a": 1,
+    "exp": "Un core funcional mejora la estabilidad y la eficiencia del movimiento."
+  },
+  {
+    "id": "Q010",
+    "tag": "Deporte",
+    "q": "El retorno al deporte luego de una lesión debe ser…",
+    "o": ["Inmediato si no duele", "Progresivo y con criterios", "Solo cuando pase un mes exacto", "Definido por redes sociales"],
+    "a": 1,
+    "exp": "Se recomienda progresión con criterios clínicos y funcionales."
+  },
+  {
+    "id": "Q011",
+    "tag": "Deporte",
+    "q": "En corredores, una baja movilidad de tobillo puede asociarse a…",
+    "o": ["Mejor técnica", "Sobrecarga en rodilla y cadera", "Mayor velocidad siempre", "Menor fatiga"],
+    "a": 1,
+    "exp": "La restricción de tobillo puede aumentar la carga en segmentos superiores."
+  },
+  {
+    "id": "Q012",
+    "tag": "Deporte",
+    "q": "¿Qué factor reduce el riesgo de lesiones por sobreuso?",
+    "o": ["Aumentar volumen brusco", "Variar estímulos y respetar descanso", "Entrenar siempre al máximo", "Ignorar dolor persistente"],
+    "a": 1,
+    "exp": "La variación de cargas y el descanso ayudan a prevenir sobreuso."
+  },
+  {
+    "id": "Q013",
+    "tag": "Deporte",
+    "q": "El fortalecimiento de glúteos suele ayudar a…",
+    "o": ["Reducir el control pélvico", "Mejorar la estabilidad de cadera", "Eliminar la movilidad", "Aumentar la rigidez lumbar"],
+    "a": 1,
+    "exp": "Glúteos fuertes mejoran la estabilidad y alineación de cadera."
+  },
+  {
+    "id": "Q014",
+    "tag": "Deporte",
+    "q": "¿Qué indica la guía de dolor durante el ejercicio terapéutico?",
+    "o": ["Dolor 0-1 siempre", "Dolor leve y tolerable puede ser aceptable", "Dolor alto siempre", "Dolor es irrelevante"],
+    "a": 1,
+    "exp": "Un dolor leve y controlado puede ser aceptable según el caso clínico."
+  },
+  {
+    "id": "Q015",
+    "tag": "Deporte",
+    "q": "En deportes de raqueta, la prevención de epicondilalgia incluye…",
+    "o": ["Aumentar tensión del encordado", "Mejorar técnica y fuerza de antebrazo", "Evitar el calentamiento", "Solo hielo"],
+    "a": 1,
+    "exp": "Técnica y fuerza adecuada reducen la carga en el codo."
+  },
+  {
+    "id": "Q016",
+    "tag": "Deporte",
+    "q": "La pliometría se usa principalmente para…",
+    "o": ["Aumentar potencia y reactividad", "Solo flexibilidad", "Descansar", "Reducir coordinación"],
+    "a": 0,
+    "exp": "La pliometría mejora potencia y respuesta elástica."
+  },
+  {
+    "id": "Q017",
+    "tag": "Deporte",
+    "q": "En deportes de contacto, el cuello fuerte ayuda a…",
+    "o": ["Aumentar riesgo de conmoción", "Disminuir la estabilidad", "Reducir impactos y control", "Eliminar la necesidad de técnica"],
+    "a": 2,
+    "exp": "Un cuello fuerte puede amortiguar impactos y mejorar control."
+  },
+  {
+    "id": "Q018",
+    "tag": "Deporte",
+    "q": "¿Qué es recomendable tras un esguince leve de tobillo?",
+    "o": ["Inmovilización prolongada", "Carga y movimiento progresivo", "Volver a competir al día siguiente", "Ignorar la inflamación"],
+    "a": 1,
+    "exp": "La movilización y carga progresiva favorecen la recuperación."
+  },
+  {
+    "id": "Q019",
+    "tag": "Deporte",
+    "q": "Un plan de prevención en fútbol suele incluir…",
+    "o": ["Solo velocidad", "Fuerza, equilibrio y cambios de dirección", "Solo estiramientos", "Ningún calentamiento"],
+    "a": 1,
+    "exp": "Combinaciones de fuerza, equilibrio y técnica disminuyen lesiones."
+  },
+  {
+    "id": "Q020",
+    "tag": "Deporte",
+    "q": "La sensación de inestabilidad en la rodilla después de una lesión sugiere…",
+    "o": ["No hacer nada", "Evaluar control neuromuscular", "Aumentar dolor con fuerza máxima", "Evitar todo ejercicio"],
+    "a": 1,
+    "exp": "El control neuromuscular es clave en la estabilidad y el retorno seguro."
+  },
+  {
+    "id": "Q021",
+    "tag": "Adultos mayores",
+    "q": "¿Qué ejercicio es fundamental para mantener independencia?",
+    "o": ["Solo flexibilidad", "Fuerza funcional", "Solo estiramiento en cama", "Evitar cargas"],
+    "a": 1,
+    "exp": "La fuerza funcional ayuda a levantarse, caminar y hacer tareas diarias."
+  },
+  {
+    "id": "Q022",
+    "tag": "Adultos mayores",
+    "q": "Para prevenir caídas, además de fuerza, es clave…",
+    "o": ["Equilibrio y visión", "Evitar caminar", "Dormir menos", "Usar calzado inestable"],
+    "a": 0,
+    "exp": "El equilibrio y la visión influyen en la estabilidad y la seguridad."
+  },
+  {
+    "id": "Q023",
+    "tag": "Adultos mayores",
+    "q": "La sarcopenia se refiere a…",
+    "o": ["Dolor articular", "Pérdida de masa y fuerza muscular", "Aumento de estatura", "Mejor coordinación"],
+    "a": 1,
+    "exp": "La sarcopenia es la pérdida de masa y fuerza muscular asociada a la edad."
+  },
+  {
+    "id": "Q024",
+    "tag": "Adultos mayores",
+    "q": "¿Qué ayuda a mantener la densidad ósea?",
+    "o": ["Actividad con carga y resistencia", "Reposo absoluto", "Solo masajes", "Evitar caminar"],
+    "a": 0,
+    "exp": "Los ejercicios con carga ayudan a mantener la densidad ósea."
+  },
+  {
+    "id": "Q025",
+    "tag": "Adultos mayores",
+    "q": "El uso de bastón correctamente ajustado…",
+    "o": ["Aumenta riesgo de caída", "Mejora estabilidad y reduce dolor", "No tiene efecto", "Debe ser más alto que el ombligo"],
+    "a": 1,
+    "exp": "Un bastón bien ajustado mejora apoyo y seguridad al caminar."
+  },
+  {
+    "id": "Q026",
+    "tag": "Adultos mayores",
+    "q": "En artrosis de rodilla, lo recomendado es…",
+    "o": ["Evitar todo movimiento", "Ejercicio dosificado y educación", "Solo reposo prolongado", "Solo analgésicos"],
+    "a": 1,
+    "exp": "El ejercicio dosificado mejora función y dolor en artrosis."
+  },
+  {
+    "id": "Q027",
+    "tag": "Adultos mayores",
+    "q": "El entrenamiento del equilibrio puede incluir…",
+    "o": ["Cambios de apoyo y superficies seguras", "Solo estar sentado", "Evitar mirar al frente", "Hacerlo sin supervisión"],
+    "a": 0,
+    "exp": "Trabajar cambios de apoyo en un entorno seguro mejora estabilidad."
+  },
+  {
+    "id": "Q028",
+    "tag": "Adultos mayores",
+    "q": "La velocidad al caminar es un indicador de…",
+    "o": ["Solo altura", "Estado funcional general", "Nivel de hidratación", "Solo fuerza de brazos"],
+    "a": 1,
+    "exp": "La velocidad de marcha refleja la funcionalidad global."
+  },
+  {
+    "id": "Q029",
+    "tag": "Adultos mayores",
+    "q": "En osteoporosis, es importante…",
+    "o": ["Evitar toda carga", "Trabajar fuerza y equilibrio con seguridad", "Solo estirar", "No salir de casa"],
+    "a": 1,
+    "exp": "La fuerza y el equilibrio reducen riesgo de fracturas por caídas."
+  },
+  {
+    "id": "Q030",
+    "tag": "Adultos mayores",
+    "q": "La rigidez matutina leve suele mejorar con…",
+    "o": ["Movimiento suave", "Inmovilización", "Fiebre", "Evitar hidratarse"],
+    "a": 0,
+    "exp": "El movimiento suave y el calor pueden aliviar la rigidez."
+  },
+  {
+    "id": "Q031",
+    "tag": "Adultos mayores",
+    "q": "La pérdida de equilibrio puede aumentar si…",
+    "o": ["Hay poca iluminación", "Se usan apoyos", "Se ordena el hogar", "Se usan barandas"],
+    "a": 0,
+    "exp": "La mala iluminación aumenta el riesgo de tropezar."
+  },
+  {
+    "id": "Q032",
+    "tag": "Adultos mayores",
+    "q": "¿Qué factor ayuda a prevenir caídas en el hogar?",
+    "o": ["Alfombras sueltas", "Buena iluminación y pasillos libres", "Pisos mojados", "Calzado inestable"],
+    "a": 1,
+    "exp": "Un entorno seguro reduce riesgos de tropiezos."
+  },
+  {
+    "id": "Q033",
+    "tag": "Adultos mayores",
+    "q": "El ejercicio respiratorio en mayores ayuda a…",
+    "o": ["Reducir la capacidad pulmonar", "Mejorar ventilación y tolerancia al esfuerzo", "Aumentar la rigidez", "Evitar caminar"],
+    "a": 1,
+    "exp": "Los ejercicios respiratorios pueden mejorar ventilación y tolerancia."
+  },
+  {
+    "id": "Q034",
+    "tag": "Adultos mayores",
+    "q": "¿Qué hábito favorece la salud articular?",
+    "o": ["Sedentarismo", "Actividad regular y dosificada", "Evitar todo esfuerzo", "Dormir en sillas"],
+    "a": 1,
+    "exp": "La actividad dosificada mantiene movilidad y función articular."
+  },
+  {
+    "id": "Q035",
+    "tag": "Adultos mayores",
+    "q": "La hidratación adecuada en mayores es importante para…",
+    "o": ["Reducir el equilibrio", "Mantener función muscular y cognitiva", "Aumentar caídas", "Evitar caminar"],
+    "a": 1,
+    "exp": "La hidratación apoya función muscular y mental."
+  },
+  {
+    "id": "Q036",
+    "tag": "Adultos mayores",
+    "q": "El uso de barandas en baño sirve para…",
+    "o": ["Obstaculizar", "Mejorar la seguridad al transferirse", "Evitar toda independencia", "Aumentar la rigidez"],
+    "a": 1,
+    "exp": "Las barandas ayudan a transferencias seguras."
+  },
+  {
+    "id": "Q037",
+    "tag": "Adultos mayores",
+    "q": "En personas mayores, el entrenamiento de potencia…",
+    "o": ["Es siempre peligroso", "Puede ser útil si es guiado", "No tiene beneficio", "Debe evitarse"],
+    "a": 1,
+    "exp": "La potencia mejora reacciones rápidas si se entrena de forma segura."
+  },
+  {
+    "id": "Q038",
+    "tag": "Adultos mayores",
+    "q": "¿Qué ayuda a mantener la movilidad de manos?",
+    "o": ["Ejercicios de agarre y destreza", "Solo reposo", "Evitar movimientos finos", "Inmovilización"],
+    "a": 0,
+    "exp": "La destreza manual mejora función en actividades diarias."
+  },
+  {
+    "id": "Q039",
+    "tag": "Adultos mayores",
+    "q": "Un signo de alerta para consultar es…",
+    "o": ["Dolor súbito e intenso", "Cansancio leve", "Sueño reparador", "Buena marcha"],
+    "a": 0,
+    "exp": "Dolor súbito e intenso requiere evaluación profesional."
+  },
+  {
+    "id": "Q040",
+    "tag": "Adultos mayores",
+    "q": "El entrenamiento cognitivo-motor combina…",
+    "o": ["Solo fuerza", "Tareas mentales y movimiento", "Reposo total", "Solo estiramientos"],
+    "a": 1,
+    "exp": "Combinar tareas mentales con movimiento mejora función global."
+  },
+  {
+    "id": "Q041",
+    "tag": "Postura",
+    "q": "La mejor estrategia postural durante el día es…",
+    "o": ["Mantener una sola postura", "Cambiar de posición con frecuencia", "Quedarse rígido", "Evitar pausas"],
+    "a": 1,
+    "exp": "Variar posturas reduce la carga sostenida en tejidos."
+  },
+  {
+    "id": "Q042",
+    "tag": "Postura",
+    "q": "En el escritorio, la pantalla debería estar…",
+    "o": ["Muy baja", "A la altura de los ojos", "Muy alta", "Detrás del teclado"],
+    "a": 1,
+    "exp": "Una pantalla a la altura de los ojos reduce la flexión cervical."
+  },
+  {
+    "id": "Q043",
+    "tag": "Postura",
+    "q": "¿Qué ayuda a disminuir tensión en hombros?",
+    "o": ["Elevarlos al escribir", "Apoyar antebrazos", "Encoger el cuello", "Evitar pausas"],
+    "a": 1,
+    "exp": "Apoyar antebrazos reduce carga en hombros y trapecios."
+  },
+  {
+    "id": "Q044",
+    "tag": "Postura",
+    "q": "El respaldo de la silla debería…",
+    "o": ["No tocar la espalda", "Dar apoyo lumbar", "Ser muy inclinado siempre", "Ser demasiado bajo"],
+    "a": 1,
+    "exp": "El apoyo lumbar ayuda a mantener una postura cómoda."
+  },
+  {
+    "id": "Q045",
+    "tag": "Postura",
+    "q": "¿Cada cuánto es recomendable hacer pausas activas?",
+    "o": ["Cada 2-3 horas", "Cada 30-60 minutos", "Solo al final del día", "Nunca"],
+    "a": 1,
+    "exp": "Pausas frecuentes reducen la fatiga y mejoran circulación."
+  },
+  {
+    "id": "Q046",
+    "tag": "Postura",
+    "q": "El uso del celular con cuello flexionado produce…",
+    "o": ["Menos carga", "Mayor carga en cervicales", "Mejor postura", "Menos tensión"],
+    "a": 1,
+    "exp": "La flexión sostenida aumenta la carga en la columna cervical."
+  },
+  {
+    "id": "Q047",
+    "tag": "Postura",
+    "q": "¿Qué es una pausa activa?",
+    "o": ["Dormir en la silla", "Breves movimientos y estiramientos", "Seguir sentado", "Comer rápido"],
+    "a": 1,
+    "exp": "Movimientos cortos ayudan a recuperar tejidos y atención."
+  },
+  {
+    "id": "Q048",
+    "tag": "Postura",
+    "q": "Una mochila pesada debería usarse…",
+    "o": ["Con una sola tira", "Con ambas tiras", "Colgada del brazo", "Solo en la mano"],
+    "a": 1,
+    "exp": "Usar ambas tiras distribuye mejor la carga."
+  },
+  {
+    "id": "Q049",
+    "tag": "Postura",
+    "q": "¿Qué ayuda a reducir la lordosis lumbar exagerada?",
+    "o": ["Fortalecer abdomen y glúteos", "Aumentar tacones", "Evitar movimiento", "Solo estirar cuello"],
+    "a": 0,
+    "exp": "El control lumbopélvico ayuda a disminuir la hiperlordosis."
+  },
+  {
+    "id": "Q050",
+    "tag": "Postura",
+    "q": "La posición ideal de los pies al estar sentado es…",
+    "o": ["Colgando", "Apoyados en el piso", "En puntas", "Cruzados siempre"],
+    "a": 1,
+    "exp": "Apoyar los pies brinda estabilidad y reduce tensión lumbar."
+  },
+  {
+    "id": "Q051",
+    "tag": "Postura",
+    "q": "El teclado debería ubicarse…",
+    "o": ["Lejos del cuerpo", "Cerca para evitar estirar los brazos", "En el borde frontal", "Sobre las piernas"],
+    "a": 1,
+    "exp": "Ubicarlo cerca reduce tensión en hombros y muñecas."
+  },
+  {
+    "id": "Q052",
+    "tag": "Postura",
+    "q": "¿Qué es más saludable: estar sentado o de pie?",
+    "o": ["Solo sentado", "Alternar ambas posturas", "Solo de pie", "Ninguna"],
+    "a": 1,
+    "exp": "Alternar posturas disminuye carga sostenida."
+  },
+  {
+    "id": "Q053",
+    "tag": "Postura",
+    "q": "Al levantar un objeto del suelo conviene…",
+    "o": ["Flexionar espalda sin rodillas", "Doblar rodillas y acercar el objeto", "Girar con el peso", "Estirar brazos lejos"],
+    "a": 1,
+    "exp": "Flexionar rodillas y acercar la carga protege la espalda."
+  },
+  {
+    "id": "Q054",
+    "tag": "Postura",
+    "q": "La inclinación pélvica neutra ayuda a…",
+    "o": ["Aumentar tensión lumbar", "Distribuir cargas", "Evitar respiración", "Eliminar movimiento"],
+    "a": 1,
+    "exp": "Una pelvis neutra distribuye mejor las cargas en columna."
+  },
+  {
+    "id": "Q055",
+    "tag": "Postura",
+    "q": "¿Qué puede mejorar la postura al dormir?",
+    "o": ["Almohada adecuada", "Dormir siempre boca abajo", "Usar muchas almohadas", "Evitar colchón"],
+    "a": 0,
+    "exp": "Una almohada adecuada mantiene alineación cervical."
+  },
+  {
+    "id": "Q056",
+    "tag": "Postura",
+    "q": "Un monitor lateral puede causar…",
+    "o": ["Más movilidad", "Rotación cervical sostenida", "Mejor postura", "Menor carga"],
+    "a": 1,
+    "exp": "El giro sostenido genera tensión cervical."
+  },
+  {
+    "id": "Q057",
+    "tag": "Postura",
+    "q": "El apoyo de la espalda en la silla sirve para…",
+    "o": ["Aumentar fatiga", "Disminuir carga muscular", "Evitar respiración", "Bajar la atención"],
+    "a": 1,
+    "exp": "El apoyo reduce la demanda de los músculos posturales."
+  },
+  {
+    "id": "Q058",
+    "tag": "Postura",
+    "q": "En tareas repetitivas, lo más recomendable es…",
+    "o": ["Repetir sin pausas", "Organizar microdescansos", "Ignorar molestias", "Acelerar siempre"],
+    "a": 1,
+    "exp": "Los microdescansos reducen fatiga por repetición."
+  },
+  {
+    "id": "Q059",
+    "tag": "Postura",
+    "q": "La flexión prolongada de cuello al leer puede provocar…",
+    "o": ["Mayor tensión cervical", "Relajación completa", "Mejor respiración", "Menos fatiga"],
+    "a": 0,
+    "exp": "La flexión sostenida puede aumentar la tensión en cuello."
+  },
+  {
+    "id": "Q060",
+    "tag": "Postura",
+    "q": "El uso de apoyapiés es útil cuando…",
+    "o": ["Los pies no llegan al piso", "La silla es muy baja", "El monitor es grande", "Se usa laptop"],
+    "a": 0,
+    "exp": "El apoyapiés permite apoyar los pies y mejorar estabilidad."
+  },
+  {
+    "id": "Q061",
+    "tag": "Aparatología",
+    "q": "El ultrasonido terapéutico es…",
+    "o": ["Un diagnóstico", "Un complemento en el tratamiento", "Un reemplazo del ejercicio", "Siempre doloroso"],
+    "a": 1,
+    "exp": "Se usa como complemento y no reemplaza el ejercicio."
+  },
+  {
+    "id": "Q062",
+    "tag": "Aparatología",
+    "q": "La electroestimulación puede ayudar a…",
+    "o": ["Mejorar activación muscular", "Eliminar necesidad de movimiento", "Curar fracturas", "Evitar rehabilitación"],
+    "a": 0,
+    "exp": "La electroestimulación puede facilitar activación y control muscular."
+  },
+  {
+    "id": "Q063",
+    "tag": "Aparatología",
+    "q": "El TENS se utiliza principalmente para…",
+    "o": ["Mejorar el dolor", "Aumentar masa ósea", "Curar tendones", "Diagnosticar"],
+    "a": 0,
+    "exp": "El TENS se utiliza para modulación del dolor."
+  },
+  {
+    "id": "Q064",
+    "tag": "Aparatología",
+    "q": "La termoterapia (calor) suele ser útil en…",
+    "o": ["Rigidez muscular", "Inflamación aguda intensa", "Herida abierta", "Fiebre"],
+    "a": 0,
+    "exp": "El calor mejora la elasticidad y el confort en rigidez."
+  },
+  {
+    "id": "Q065",
+    "tag": "Aparatología",
+    "q": "La crioterapia (frío) se indica más en…",
+    "o": ["Inflamación aguda", "Rigidez crónica", "Espasmo leve", "Sueño"],
+    "a": 0,
+    "exp": "El frío ayuda a controlar dolor e inflamación aguda."
+  },
+  {
+    "id": "Q066",
+    "tag": "Aparatología",
+    "q": "El láser terapéutico se usa como…",
+    "o": ["Sustituto del ejercicio", "Complemento para dolor y tejidos", "Diagnóstico por imagen", "Calentamiento"],
+    "a": 1,
+    "exp": "El láser puede ayudar en dolor y reparación, pero es complementario."
+  },
+  {
+    "id": "Q067",
+    "tag": "Aparatología",
+    "q": "La onda corta (diatermia) se caracteriza por…",
+    "o": ["Aplicar calor profundo", "Enfriar tejidos", "Ser solo estética", "No tener efectos"],
+    "a": 0,
+    "exp": "La diatermia genera calor profundo en tejidos."
+  },
+  {
+    "id": "Q068",
+    "tag": "Aparatología",
+    "q": "La magnetoterapia se usa principalmente para…",
+    "o": ["Dolor y recuperación", "Aumentar velocidad", "Sustituir fuerza", "Diagnosticar"],
+    "a": 0,
+    "exp": "Se usa como complemento para dolor y recuperación."
+  },
+  {
+    "id": "Q069",
+    "tag": "Aparatología",
+    "q": "La presoterapia puede ayudar a…",
+    "o": ["Mejorar retorno venoso", "Aumentar rigidez", "Reemplazar ejercicios", "Curar fracturas"],
+    "a": 0,
+    "exp": "La presoterapia favorece el retorno venoso y el drenaje."
+  },
+  {
+    "id": "Q070",
+    "tag": "Aparatología",
+    "q": "La compresión neumática intermitente se usa en…",
+    "o": ["Edema y circulación", "Reemplazo de marcha", "Entrenamiento de fuerza", "Diagnóstico"],
+    "a": 0,
+    "exp": "Puede ayudar en edema y retorno venoso."
+  },
+  {
+    "id": "Q071",
+    "tag": "Aparatología",
+    "q": "La terapia manual se considera…",
+    "o": ["Sustituto del ejercicio", "Complemento para mejorar movilidad", "Innecesaria", "Solo estética"],
+    "a": 1,
+    "exp": "Es una herramienta complementaria para movilidad y dolor."
+  },
+  {
+    "id": "Q072",
+    "tag": "Aparatología",
+    "q": "¿Qué objetivo tiene la movilización articular?",
+    "o": ["Aumentar rigidez", "Mejorar rango y aliviar dolor", "Eliminar movimiento", "Aumentar inflamación"],
+    "a": 1,
+    "exp": "La movilización puede mejorar el rango y disminuir dolor."
+  },
+  {
+    "id": "Q073",
+    "tag": "Aparatología",
+    "q": "La punción seca se utiliza para…",
+    "o": ["Puntos gatillo miofasciales", "Fracturas", "Diagnóstico por imagen", "Reemplazar ejercicios"],
+    "a": 0,
+    "exp": "Se usa en puntos gatillo para modular dolor y tensión."
+  },
+  {
+    "id": "Q074",
+    "tag": "Aparatología",
+    "q": "El uso de vendaje neuromuscular busca…",
+    "o": ["Inmovilizar totalmente", "Facilitar soporte y propiocepción", "Sustituir fuerza", "Eliminar movimiento"],
+    "a": 1,
+    "exp": "El vendaje puede brindar soporte y favorecer propiocepción."
+  },
+  {
+    "id": "Q075",
+    "tag": "Aparatología",
+    "q": "La hidroterapia es útil porque…",
+    "o": ["Reduce carga articular", "Aumenta impacto", "Evita movimiento", "No tiene efectos"],
+    "a": 0,
+    "exp": "El agua reduce la carga y permite moverse con menos dolor."
+  },
+  {
+    "id": "Q076",
+    "tag": "Aparatología",
+    "q": "¿Qué es un dinamómetro?",
+    "o": ["Medidor de fuerza", "Aparato de frío", "Tipo de vendaje", "Equipo de imagen"],
+    "a": 0,
+    "exp": "El dinamómetro mide fuerza, útil para seguimiento."
+  },
+  {
+    "id": "Q077",
+    "tag": "Aparatología",
+    "q": "El uso de bandas elásticas ayuda a…",
+    "o": ["Progresar fuerza con carga dosificada", "Evitar cualquier ejercicio", "Aumentar dolor", "Reducir control"],
+    "a": 0,
+    "exp": "Permiten dosificar cargas de manera sencilla."
+  },
+  {
+    "id": "Q078",
+    "tag": "Aparatología",
+    "q": "La plataforma de equilibrio se usa para…",
+    "o": ["Entrenar propiocepción", "Aumentar rigidez", "Sustituir marcha", "Dormir"],
+    "a": 0,
+    "exp": "Se usa para entrenamiento de equilibrio y control."
+  },
+  {
+    "id": "Q079",
+    "tag": "Aparatología",
+    "q": "El rodillo de espuma (foam roller) puede…",
+    "o": ["Mejorar movilidad y percepción de rigidez", "Curar lesiones graves", "Reemplazar ejercicio", "Aumentar inflamación"],
+    "a": 0,
+    "exp": "Puede ayudar en movilidad y sensación de rigidez."
+  },
+  {
+    "id": "Q080",
+    "tag": "Aparatología",
+    "q": "La bicicleta fija en rehabilitación se usa para…",
+    "o": ["Trabajo aeróbico de bajo impacto", "Solo fuerza máxima", "Evitar movimiento", "Aumentar dolor"],
+    "a": 0,
+    "exp": "Es un ejercicio aeróbico con bajo impacto articular."
+  },
+  {
+    "id": "Q081",
+    "tag": "Prevención",
+    "q": "La mejor forma de prevenir lesiones es…",
+    "o": ["Entrenar sin plan", "Planificar cargas y técnica", "Evitar actividad", "Hacerlo todo al máximo"],
+    "a": 1,
+    "exp": "Planificar carga y técnica reduce el riesgo de lesión."
+  },
+  {
+    "id": "Q082",
+    "tag": "Prevención",
+    "q": "En prevención de espalda, es importante…",
+    "o": ["Fortalecer core y moverse", "Evitar moverse", "Solo estirar cuello", "Dormir sentado"],
+    "a": 0,
+    "exp": "La movilidad y el fortalecimiento del core ayudan a la espalda."
+  },
+  {
+    "id": "Q083",
+    "tag": "Prevención",
+    "q": "¿Qué hábito reduce el riesgo de dolor lumbar?",
+    "o": ["Sedentarismo", "Actividad física regular", "Evitar caminar", "Cargar siempre pesado"],
+    "a": 1,
+    "exp": "La actividad física regular reduce el riesgo de dolor lumbar."
+  },
+  {
+    "id": "Q084",
+    "tag": "Prevención",
+    "q": "Para prevenir tendinopatías es clave…",
+    "o": ["Incrementos bruscos", "Progresión gradual de carga", "Evitar fuerza", "Solo hielo"],
+    "a": 1,
+    "exp": "La progresión gradual permite adaptación del tendón."
+  },
+  {
+    "id": "Q085",
+    "tag": "Prevención",
+    "q": "La ergonomía en el trabajo busca…",
+    "o": ["Aumentar el cansancio", "Adaptar el entorno a la persona", "Evitar pausas", "Aumentar dolor"],
+    "a": 1,
+    "exp": "La ergonomía adapta el puesto para reducir carga."
+  },
+  {
+    "id": "Q086",
+    "tag": "Prevención",
+    "q": "El descanso adecuado es importante porque…",
+    "o": ["Reduce la recuperación", "Favorece la reparación tisular", "Disminuye energía", "Aumenta riesgo"],
+    "a": 1,
+    "exp": "Dormir bien favorece la recuperación de tejidos."
+  },
+  {
+    "id": "Q087",
+    "tag": "Prevención",
+    "q": "¿Qué estrategia ayuda a prevenir dolor de muñeca en escritorio?",
+    "o": ["Apoyar antebrazos y mantener muñeca neutra", "Apoyar el peso en la muñeca", "Usar teclado alto", "Evitar descansos"],
+    "a": 0,
+    "exp": "Mantener muñeca neutra reduce compresión y sobrecarga."
+  },
+  {
+    "id": "Q088",
+    "tag": "Prevención",
+    "q": "En deportes recreativos, la prevención incluye…",
+    "o": ["Calentamiento y progresión", "Entrenar sin pausa", "Evitar técnica", "Ignorar molestias"],
+    "a": 0,
+    "exp": "Calentar y progresar reduce lesiones en deportes recreativos."
+  },
+  {
+    "id": "Q089",
+    "tag": "Prevención",
+    "q": "El trabajo de movilidad sirve para…",
+    "o": ["Reducir rango", "Mantener rangos funcionales", "Evitar fuerza", "Aumentar dolor"],
+    "a": 1,
+    "exp": "La movilidad mantiene rangos funcionales y control."
+  },
+  {
+    "id": "Q090",
+    "tag": "Prevención",
+    "q": "Para prevenir caídas en casa se recomienda…",
+    "o": ["Pisos resbaladizos", "Iluminación adecuada", "Obstáculos en pasillos", "Evitar barandas"],
+    "a": 1,
+    "exp": "La iluminación adecuada reduce tropiezos."
+  },
+  {
+    "id": "Q091",
+    "tag": "Prevención",
+    "q": "El uso de calzado adecuado ayuda a…",
+    "o": ["Mejorar estabilidad", "Aumentar riesgo", "Evitar caminar", "Reducir equilibrio"],
+    "a": 0,
+    "exp": "Un buen calzado aporta estabilidad y absorción."
+  },
+  {
+    "id": "Q092",
+    "tag": "Prevención",
+    "q": "Las pausas activas en el trabajo previenen…",
+    "o": ["Circulación", "Fatiga y rigidez", "Mejor postura", "Nada"],
+    "a": 1,
+    "exp": "Las pausas activas ayudan a reducir fatiga y rigidez."
+  },
+  {
+    "id": "Q093",
+    "tag": "Prevención",
+    "q": "La hidratación adecuada ayuda a…",
+    "o": ["Mantener rendimiento y recuperación", "Aumentar calambres", "Evitar ejercicio", "Aumentar dolor"],
+    "a": 0,
+    "exp": "La hidratación ayuda a rendimiento y recuperación."
+  },
+  {
+    "id": "Q094",
+    "tag": "Prevención",
+    "q": "En prevención de lesiones, la técnica correcta…",
+    "o": ["No influye", "Distribuye mejor las cargas", "Aumenta el dolor", "Elimina fuerza"],
+    "a": 1,
+    "exp": "La técnica correcta optimiza la distribución de cargas."
+  },
+  {
+    "id": "Q095",
+    "tag": "Prevención",
+    "q": "El estrés crónico puede…",
+    "o": ["Aumentar tensión muscular", "Mejorar recuperación", "Reducir dolor", "Eliminar fatiga"],
+    "a": 0,
+    "exp": "El estrés sostenido aumenta tensión muscular y percepción de dolor."
+  },
+  {
+    "id": "Q096",
+    "tag": "Prevención",
+    "q": "¿Qué ayuda a prevenir calambres?",
+    "o": ["Hidratación y carga progresiva", "Entrenar en ayunas sin agua", "Evitar estirar", "Dormir poco"],
+    "a": 0,
+    "exp": "La hidratación y progresión de carga ayudan a prevenir calambres."
+  },
+  {
+    "id": "Q097",
+    "tag": "Prevención",
+    "q": "El trabajo de fuerza es importante porque…",
+    "o": ["Protege articulaciones y tendones", "Aumenta riesgo siempre", "Elimina movilidad", "No tiene utilidad"],
+    "a": 0,
+    "exp": "La fuerza protege tejidos y mejora estabilidad."
+  },
+  {
+    "id": "Q098",
+    "tag": "Prevención",
+    "q": "Para prevenir dolor de hombro en oficina, conviene…",
+    "o": ["Elevar brazos todo el día", "Ajustar altura de escritorio", "Evitar pausas", "Usar mouse lejos"],
+    "a": 1,
+    "exp": "Una altura adecuada reduce carga en hombros."
+  },
+  {
+    "id": "Q099",
+    "tag": "Prevención",
+    "q": "El entrenamiento de equilibrio es útil para…",
+    "o": ["Evitar caídas", "Aumentar rigidez", "Reducir coordinación", "Dormir mejor"],
+    "a": 0,
+    "exp": "El equilibrio mejora estabilidad y reduce caídas."
+  },
+  {
+    "id": "Q100",
+    "tag": "Prevención",
+    "q": "El dolor persistente durante semanas debería…",
+    "o": ["Ignorarse", "Ser evaluado por un profesional", "Tratarse solo con hielo", "Evitar consulta"],
+    "a": 1,
+    "exp": "El dolor persistente requiere evaluación profesional."
+  },
+  {
+    "id": "Q101",
+    "tag": "Dolor",
+    "q": "El dolor no siempre indica daño severo porque…",
+    "o": ["Siempre es imaginario", "El sistema nervioso también modula", "Nunca es real", "Solo depende del hueso"],
+    "a": 1,
+    "exp": "El dolor es una señal compleja modulada por el sistema nervioso."
+  },
+  {
+    "id": "Q102",
+    "tag": "Dolor",
+    "q": "El dolor agudo suele ser…",
+    "o": ["De corta duración", "Siempre crónico", "Sin causa", "Solo psicológico"],
+    "a": 0,
+    "exp": "El dolor agudo suele ser de corta duración y ligado a una lesión."
+  },
+  {
+    "id": "Q103",
+    "tag": "Dolor",
+    "q": "El dolor crónico se define generalmente por…",
+    "o": ["Menos de 1 semana", "Más de 3 meses", "Solo 24 horas", "Solo con fiebre"],
+    "a": 1,
+    "exp": "El dolor crónico suele durar más de 3 meses."
+  },
+  {
+    "id": "Q104",
+    "tag": "Dolor",
+    "q": "¿Qué puede aumentar la percepción de dolor?",
+    "o": ["Estrés y falta de sueño", "Buen descanso", "Ejercicio dosificado", "Apoyo social"],
+    "a": 0,
+    "exp": "Estrés y poco sueño pueden aumentar sensibilidad al dolor."
+  },
+  {
+    "id": "Q105",
+    "tag": "Dolor",
+    "q": "El movimiento adecuado en dolor lumbar suele…",
+    "o": ["Empeorar siempre", "Ayudar a mejorar", "No influir", "Ser peligroso siempre"],
+    "a": 1,
+    "exp": "El movimiento dosificado suele mejorar el dolor lumbar."
+  },
+  {
+    "id": "Q106",
+    "tag": "Dolor",
+    "q": "¿Qué es la alodinia?",
+    "o": ["Dolor ante estímulo normalmente no doloroso", "Dolor solo nocturno", "Dolor muscular normal", "Dolor por fractura"],
+    "a": 0,
+    "exp": "La alodinia es dolor ante estímulos que no deberían doler."
+  },
+  {
+    "id": "Q107",
+    "tag": "Dolor",
+    "q": "La educación en dolor ayuda a…",
+    "o": ["Aumentar miedo al movimiento", "Entender y manejar síntomas", "Evitar ejercicio", "Reemplazar tratamiento"],
+    "a": 1,
+    "exp": "Comprender el dolor reduce miedo y mejora manejo."
+  },
+  {
+    "id": "Q108",
+    "tag": "Dolor",
+    "q": "El reposo prolongado ante dolor suele…",
+    "o": ["Mejorar siempre", "Empeorar la función", "Curar todo", "No tener efecto"],
+    "a": 1,
+    "exp": "El reposo prolongado puede reducir la función y aumentar sensibilidad."
+  },
+  {
+    "id": "Q109",
+    "tag": "Dolor",
+    "q": "La respiración lenta y profunda puede…",
+    "o": ["Aumentar ansiedad", "Ayudar a modular el dolor", "No tener efecto", "Empeorar el sueño"],
+    "a": 1,
+    "exp": "La respiración lenta reduce el estrés y puede disminuir dolor."
+  },
+  {
+    "id": "Q110",
+    "tag": "Dolor",
+    "q": "¿Qué significa dolor referido?",
+    "o": ["Dolor solo local", "Dolor percibido en otra zona", "Dolor sin causa", "Dolor solo en piel"],
+    "a": 1,
+    "exp": "El dolor referido se percibe en una zona distinta al origen."
+  },
+  {
+    "id": "Q111",
+    "tag": "Dolor",
+    "q": "En dolor persistente, el ejercicio dosificado…",
+    "o": ["Es inútil", "Puede mejorar la tolerancia", "Empeora siempre", "No se recomienda"],
+    "a": 1,
+    "exp": "El ejercicio gradual mejora tolerancia y función."
+  },
+  {
+    "id": "Q112",
+    "tag": "Dolor",
+    "q": "El catastrofismo del dolor se refiere a…",
+    "o": ["Pensamientos negativos exagerados", "Dolor real", "Inflamación", "Fractura"],
+    "a": 0,
+    "exp": "El catastrofismo aumenta el miedo y la percepción del dolor."
+  },
+  {
+    "id": "Q113",
+    "tag": "Dolor",
+    "q": "El uso de analgésicos debe ser…",
+    "o": ["Sin control", "Según indicación profesional", "Siempre diario", "Evitado siempre"],
+    "a": 1,
+    "exp": "Los analgésicos deben usarse con indicación profesional."
+  },
+  {
+    "id": "Q114",
+    "tag": "Dolor",
+    "q": "¿Qué es hiperalgesia?",
+    "o": ["Mayor sensibilidad al dolor", "Falta de dolor", "Dolor en reposo", "Dolor de cabeza"],
+    "a": 0,
+    "exp": "La hiperalgesia es mayor sensibilidad al dolor."
+  },
+  {
+    "id": "Q115",
+    "tag": "Dolor",
+    "q": "El miedo al movimiento puede causar…",
+    "o": ["Mejoría inmediata", "Evitación y pérdida de función", "Aumento de fuerza", "Sueño profundo"],
+    "a": 1,
+    "exp": "El miedo al movimiento puede llevar a evitación y pérdida funcional."
+  },
+  {
+    "id": "Q116",
+    "tag": "Dolor",
+    "q": "La actividad física regular suele…",
+    "o": ["Aumentar dolor crónico", "Mejorar tolerancia y ánimo", "No tener impacto", "Empeorar el sueño"],
+    "a": 1,
+    "exp": "La actividad física ayuda a modular dolor y mejorar ánimo."
+  },
+  {
+    "id": "Q117",
+    "tag": "Dolor",
+    "q": "El dolor nocturno persistente puede indicar…",
+    "o": ["Nada importante", "Necesidad de evaluación", "Mejoría", "Solo cansancio"],
+    "a": 1,
+    "exp": "El dolor nocturno persistente debe evaluarse."
+  },
+  {
+    "id": "Q118",
+    "tag": "Dolor",
+    "q": "La inflamación aguda suele presentar…",
+    "o": ["Calor, rubor e hinchazón", "Piel fría", "Pérdida de color", "Aumento de fuerza"],
+    "a": 0,
+    "exp": "Inflamación aguda: calor, rubor, dolor e hinchazón."
+  },
+  {
+    "id": "Q119",
+    "tag": "Dolor",
+    "q": "¿Qué ayuda a manejar el dolor persistente?",
+    "o": ["Educación, actividad y sueño", "Reposo absoluto", "Evitar toda carga", "Solo hielo"],
+    "a": 0,
+    "exp": "La combinación de educación, actividad y sueño mejora el manejo."
+  },
+  {
+    "id": "Q120",
+    "tag": "Dolor",
+    "q": "En caso de dolor intenso con pérdida de fuerza súbita se recomienda…",
+    "o": ["Esperar en casa", "Consultar de inmediato", "Entrenar más", "Solo estirar"],
+    "a": 1,
+    "exp": "Pérdida súbita de fuerza requiere evaluación inmediata."
+  }
+]

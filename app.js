@@ -26,85 +26,18 @@ const VIB = {
   end: [80, 60, 80],
 };
 
-// Preguntas
-const QUESTIONS = [
-  {
-    tag: "Bases",
-    q: "¿Qué significa “kinesiología” en términos simples?",
-    o: ["Solo masajes", "Movimiento y función", "Cirugía", "Dieta"],
-    a: 1,
-    exp: "Se centra en movimiento, función y recuperación. No es solo masaje."
-  },
-  {
-    tag: "Deporte",
-    q: "Dolor muscular tardío tras entrenar (agujetas): lo más común es…",
-    o: ["Lesión grave siempre", "Adaptación del músculo", "Infección", "“Ácido láctico” por días"],
-    a: 1,
-    exp: "Suele ser adaptación a carga nueva. Si es intenso o persiste, conviene evaluar."
-  },
-  {
-    tag: "Postura",
-    q: "La mejor “postura” suele ser…",
-    o: ["La perfecta", "La que más repetís", "La siguiente (cambiar de posición)", "La de Instagram"],
-    a: 2,
-    exp: "Variar posturas y moverse suele ser lo más saludable para el cuerpo."
-  },
-  {
-    tag: "Oficina",
-    q: "¿Qué suele empeorar más el dolor de cuello en oficina?",
-    o: ["Pausas", "Pantalla baja y cuello hacia adelante", "Caminar", "Hidratación"],
-    a: 1,
-    exp: "La cabeza adelantada aumenta carga en cervical y trapecios."
-  },
-  {
-    tag: "Movilidad",
-    q: "¿Qué es la movilidad?",
-    o: ["Flexibilidad únicamente", "Rango de movimiento controlado", "Fuerza máxima", "Resistencia aeróbica"],
-    a: 1,
-    exp: "Movilidad = rango + control. No es solo “estirar”."
-  },
-  {
-    tag: "Adultos mayores",
-    q: "Para prevenir caídas en adultos mayores es clave…",
-    o: ["Solo estirar", "Equilibrio + fuerza", "Evitar moverse", "Masajes diarios"],
-    a: 1,
-    exp: "Fuerza y equilibrio aumentan estabilidad y confianza al moverse."
-  },
-  {
-    tag: "Mitos",
-    q: "Si me duele, entonces debo parar todo movimiento siempre.",
-    o: ["Verdadero", "Falso"],
-    a: 1,
-    exp: "Muchas veces se adapta movimiento y carga. Parar siempre puede empeorar."
-  },
-  {
-    tag: "Calor",
-    q: "La termoterapia (calor) suele ayudar más cuando hay…",
-    o: ["Rigidez/tensión", "Herida abierta", "Fiebre", "Inflamación aguda fuerte"],
-    a: 0,
-    exp: "El calor puede relajar y mejorar confort en rigidez."
-  },
-  {
-    tag: "Tecnología",
-    q: "Ultrasonido terapéutico: lo más correcto es…",
-    o: ["Cura todo", "Herramienta complementaria", "Sustituye movimiento", "Sirve para diagnosticar"],
-    a: 1,
-    exp: "Complementa. Lo activo (movimiento) suele ser parte clave del plan."
-  },
-  {
-    tag: "Criterio clínico",
-    q: "¿Qué suele dar mejores resultados a largo plazo?",
-    o: ["Una sesión", "Solo aparatología", "Tratamiento + hábitos + ejercicios simples", "Esperar"],
-    a: 2,
-    exp: "Lo sostenible gana: hábitos y ejercicios simples mantienen el cambio."
-  }
-];
+// Preguntas (se cargan desde questions.json)
+let questionBank = [];
+const usedQuestionIds = new Set();
+let isQuestionsReady = false;
+let lastFocus = null;
 
 // Helpers DOM
 const $ = (id) => document.getElementById(id);
 
 // UI
 const els = {
+  app: document.querySelector(".app"),
   screens: {
     start: $("screenStart"),
     quiz: $("screenQuiz"),
@@ -390,6 +323,51 @@ function updateHud(){
   }
 }
 
+function setStartButtonsDisabled(disabled){
+  [els.btnStart, els.btnStartFromHow].forEach((btn) => {
+    btn.disabled = disabled;
+    btn.setAttribute("aria-disabled", String(disabled));
+    btn.title = disabled ? "Cargando preguntas…" : "";
+  });
+}
+
+async function loadQuestions(){
+  setStartButtonsDisabled(true);
+  try{
+    const res = await fetch("./questions.json", {cache: "force-cache"});
+    if(!res.ok){
+      throw new Error("No se pudo cargar questions.json");
+    }
+    const data = await res.json();
+    const list = Array.isArray(data) ? data : data.questions;
+    if(!Array.isArray(list) || list.length < TOTAL_QUESTIONS){
+      throw new Error("Banco de preguntas insuficiente");
+    }
+    questionBank = list;
+    isQuestionsReady = true;
+  }catch(err){
+    console.error(err);
+    isQuestionsReady = false;
+    alert("No se pudieron cargar las preguntas. Reintentá en unos segundos.");
+  }finally{
+    setStartButtonsDisabled(!isQuestionsReady);
+  }
+}
+
+function pickQuestions(){
+  if(!isQuestionsReady){
+    return [];
+  }
+  let available = questionBank.filter((q) => !usedQuestionIds.has(q.id));
+  if(available.length < TOTAL_QUESTIONS){
+    usedQuestionIds.clear();
+    available = [...questionBank];
+  }
+  const selection = shuffle(available).slice(0, TOTAL_QUESTIONS);
+  selection.forEach((q) => usedQuestionIds.add(q.id));
+  return selection;
+}
+
 function updateProgress(){
   const pct = (index / TOTAL_QUESTIONS) * 100;
   els.progressFill.style.width = `${pct}%`;
@@ -428,7 +406,7 @@ function stopTimer(){
 }
 
 function resetGame(){
-  queue = shuffle(QUESTIONS).slice(0, TOTAL_QUESTIONS);
+  queue = pickQuestions();
   index = 0;
   score = 0;
   hits = 0;
@@ -461,14 +439,21 @@ function renderQuestion(){
   els.qTag.textContent = q.tag || "Kinesiología";
   els.qText.textContent = q.q;
 
+  const fragment = document.createDocumentFragment();
   q.o.forEach((opt, i)=>{
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = "answer";
     btn.textContent = opt;
     btn.addEventListener("click", () => onAnswer(i));
-    els.answers.appendChild(btn);
+    fragment.appendChild(btn);
   });
+  els.answers.appendChild(fragment);
+
+  const firstAnswer = els.answers.querySelector(".answer");
+  if(firstAnswer){
+    requestAnimationFrame(() => firstAnswer.focus());
+  }
 }
 
 function onAnswer(choice){
@@ -579,24 +564,29 @@ async function copyResult(){
 
 // Modal
 function openHow(){ els.modalHow.hidden = false; soundClick(); vibrate([12]); }
-function closeHow(){ els.modalHow.hidden = true; soundClick(); vibrate([12]); }
+function closeHow(){ els.modalHow.hidden = true; soundClick(); vibrate([12]); if(lastFocus) lastFocus.focus(); }
 
 // Sonido toggle
 function loadSoundSetting(){
   const v = localStorage.getItem("mk_sound");
   soundEnabled = (v === null) ? true : (v === "1");
   els.btnSound.textContent = soundEnabled ? "🔊" : "🔇";
+  els.btnSound.setAttribute("aria-pressed", String(soundEnabled));
 }
 function toggleSound(){
   soundEnabled = !soundEnabled;
   localStorage.setItem("mk_sound", soundEnabled ? "1" : "0");
   els.btnSound.textContent = soundEnabled ? "🔊" : "🔇";
+  els.btnSound.setAttribute("aria-pressed", String(soundEnabled));
   soundClick();
   vibrate([10]);
 }
 
 // Init
 function startGame(){
+  if(!isQuestionsReady){
+    return;
+  }
   resetGame();
   showScreen("quiz");
 
@@ -611,7 +601,11 @@ function startGame(){
 }
 
 // Eventos
-els.btnHow.addEventListener("click", openHow);
+els.btnHow.addEventListener("click", () => {
+  lastFocus = document.activeElement;
+  openHow();
+  els.btnCloseHow.focus();
+});
 els.btnCloseHow.addEventListener("click", closeHow);
 els.btnStartFromHow.addEventListener("click", () => { closeHow(); startGame(); });
 
@@ -626,9 +620,28 @@ els.btnCopy.addEventListener("click", copyResult);
 els.btnSound.addEventListener("click", toggleSound);
 
 window.addEventListener("resize", resizeConfetti);
+document.addEventListener("keydown", (event) => {
+  if(event.key === "Escape" && !els.modalHow.hidden){
+    closeHow();
+  }
+  if(event.key === "Tab" && !els.modalHow.hidden){
+    const focusable = els.modalHow.querySelectorAll("button, [href], input, select, textarea, [tabindex]:not([tabindex='-1'])");
+    if(!focusable.length) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if(event.shiftKey && document.activeElement === first){
+      event.preventDefault();
+      last.focus();
+    }else if(!event.shiftKey && document.activeElement === last){
+      event.preventDefault();
+      first.focus();
+    }
+  }
+});
 
 // Boot
 els.year.textContent = String(new Date().getFullYear());
 loadSoundSetting();
 updateHud();
 resizeConfetti();
+loadQuestions();

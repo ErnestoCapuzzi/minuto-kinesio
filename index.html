@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
+  <link rel="preload" href="./questions.json" as="fetch" crossorigin>
   <link rel="stylesheet" href="./styles.css" />
 </head>
 
@@ -34,9 +35,9 @@
       </div>
 
       <div class="hud" aria-label="Estado del juego">
-        <div class="hudPill" id="hudProgress">1/10</div>
-        <div class="hudPill" id="hudScore">0 pts</div>
-        <div class="hudPill" id="hudTime" title="Tiempo restante">60s</div>
+        <div class="hudPill" id="hudProgress" aria-live="polite">1/10</div>
+        <div class="hudPill" id="hudScore" aria-live="polite">0 pts</div>
+        <div class="hudPill" id="hudTime" title="Tiempo restante" aria-live="off">60s</div>
 
         <!-- Toggle sonido -->
         <button class="hudPill hudBtn" id="btnSound" type="button" aria-label="Activar o desactivar sonido" title="Sonido">
@@ -120,7 +121,7 @@
 
         <div class="answers" id="answers"></div>
 
-        <div class="feedback" id="feedback" hidden>
+        <div class="feedback" id="feedback" hidden role="status" aria-live="polite">
           <div class="fbRow">
             <div class="fbTitle" id="fbTitle">✅ Correcto</div>
             <div class="fbPoints" id="fbPoints">+10</div>

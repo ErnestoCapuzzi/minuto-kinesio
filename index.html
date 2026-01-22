@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Minuto Kine: trivia educativa de kinesiología en 10 preguntas." />
+  <title>Minuto Kine | Evelyn Capuzzi</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <!-- Confetti canvas (minimalista) -->
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <div class="bg" aria-hidden="true">
+    <div class="orb o1"></div>
+    <div class="orb o2"></div>
+    <div class="gridOverlay"></div>
+  </div>
+
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">
+        <img class="logo" src="evi.jpeg" alt="Logo Evelyn Capuzzi" onerror="this.src='./assets/logo.jpg'">
+        <div class="brandText">
+          <div class="brandName">EVELYN CAPUZZI</div>
+          <div class="brandSub">Lic. en Kinesiología y Fisiatría</div>
+        </div>
+      </div>
+
+      <div class="hud" aria-label="Estado del juego">
+        <div class="hudPill" id="hudProgress">1/10</div>
+        <div class="hudPill" id="hudScore">0 pts</div>
+        <div class="hudPill" id="hudTime" title="Tiempo restante">60s</div>
+
+        <!-- Toggle sonido -->
+        <button class="hudPill hudBtn" id="btnSound" type="button" aria-label="Activar o desactivar sonido" title="Sonido">
+          🔊
+        </button>
+      </div>
+    </header>
+
+    <!-- START SCREEN -->
+    <section class="screen screen--active" id="screenStart" aria-label="Pantalla de inicio">
+      <div class="card hero">
+        <div class="heroLeft">
+          <div class="kicker">MINUTO KINE</div>
+          <h1>10 preguntas rápidas para aprender y entretener.</h1>
+          <p class="lead">
+            Un mini desafío de kinesiología para público general.
+            Cada respuesta trae una explicación corta para que te lleves algo útil.
+          </p>
+
+          <div class="ctaRow">
+            <button class="btn btnPrimary btnLg" id="btnStart">Empezar</button>
+            <button class="btn btnGhost btnLg" id="btnHow">¿Cómo funciona?</button>
+          </div>
+
+          <div class="fine">
+            Tip: jugalo en historias y retá a alguien 🔍
+          </div>
+        </div>
+
+        <div class="heroRight" aria-hidden="true">
+          <div class="spine">
+            <div class="spineLine"></div>
+            <div class="spineDots">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <div class="heroBadge">
+            <div class="badgeTitle">Modo</div>
+            <div class="badgeValue">10 preguntas · 60s</div>
+            <div class="badgeHint">calma · claridad · criterio clínico</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" id="modalHow" hidden role="dialog" aria-modal="true" aria-label="Cómo funciona">
+        <div class="modalCard">
+          <div class="modalTop">
+            <div class="modalTitle">Cómo funciona</div>
+            <button class="iconBtn" id="btnCloseHow" aria-label="Cerrar">✕</button>
+          </div>
+          <ul class="rules">
+            <li>Son <strong>10 preguntas</strong>.</li>
+            <li>Cada respuesta trae <strong>explicación breve</strong>.</li>
+            <li>Sumás puntos por aciertos, por racha y por responder rápido.</li>
+            <li>Tiempo total: <strong>60s</strong>.</li>
+          </ul>
+          <button class="btn btnPrimary btnFull" id="btnStartFromHow">Empezar ahora</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIZ SCREEN -->
+    <section class="screen" id="screenQuiz" aria-label="Pantalla de preguntas">
+      <div class="card quiz" id="quizCard">
+        <div class="quizTop">
+          <div class="progressWrap" aria-label="Progreso">
+            <div class="progressBar">
+              <div class="progressFill" id="progressFill"></div>
+            </div>
+            <div class="progressMeta">
+              <span class="muted" id="qMeta">Pregunta 1 de 10</span>
+              <span class="muted" id="streakMeta">Racha: 0</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="questionArea">
+          <div class="pillTitle" id="qTag">Kinesiología</div>
+          <h2 class="question" id="qText">Cargando…</h2>
+        </div>
+
+        <div class="answers" id="answers"></div>
+
+        <div class="feedback" id="feedback" hidden>
+          <div class="fbRow">
+            <div class="fbTitle" id="fbTitle">✅ Correcto</div>
+            <div class="fbPoints" id="fbPoints">+10</div>
+          </div>
+          <div class="fbText" id="fbText"></div>
+
+          <div class="fbActions">
+            <button class="btn btnGhost" id="btnSkip">Saltar</button>
+            <button class="btn btnPrimary" id="btnNext">Siguiente</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULT SCREEN -->
+    <section class="screen" id="screenResult" aria-label="Pantalla de resultados">
+      <div class="card result">
+        <div class="resultTop">
+          <div class="kicker">RESULTADO</div>
+          <h2 id="resultTitle">Listo ✅</h2>
+          <p class="lead" id="resultLead">Tu puntaje final: 0</p>
+        </div>
+
+        <div class="resultGrid">
+          <div class="stat">
+            <div class="statK">Puntaje</div>
+            <div class="statV" id="statScore">0</div>
+          </div>
+          <div class="stat">
+            <div class="statK">Aciertos</div>
+            <div class="statV" id="statHits">0/10</div>
+          </div>
+          <div class="stat">
+            <div class="statK">Mejor racha</div>
+            <div class="statV" id="statBestStreak">0</div>
+          </div>
+        </div>
+
+        <div class="resultActions">
+          <button class="btn btnPrimary btnLg" id="btnPlayAgain">Jugar de nuevo</button>
+          <button class="btn btnSoft btnLg" id="btnCopy">Copiar resultado</button>
+        </div>
+
+        <div class="fine muted">
+          Esto es informativo y no reemplaza consulta profesional.
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="muted">© <span id="year"></span> Minuto Kine</div>
+      <div class="muted">Diseño: estética clínica, calma visual, tipografía limpia</div>
+    </footer>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
